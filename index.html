@@ -31,7 +31,7 @@
         width: 100%;
         max-width: 400px;
         height: auto;
-
+        magine: 10px;
         display: block;
         border: 5px solid transparent;
         box-sizing: border-box;
@@ -78,9 +78,23 @@
           box-shadow: 0px 0px 30px 10px red;
         }
       }
-      a {
-        text-decoration: none;
-        color: aliceblue;
+      .btn button{
+       font-size: 35px;
+        color:white;
+        border-radius: 10px;
+        border: none;
+        animation-name: image;
+        animation-iteration-count: infinite;
+        animation-duration: 1s;
+    }
+    @keyframes image {
+        form {
+          background-color: red;
+        }
+        to {
+          background-color: red;
+          box-shadow: 0px 0px 30px 10px red;
+        }
       }
     </style>
   </head>
@@ -123,6 +137,9 @@
       </div>
       <div class="image-container">
         <img src=" Beautiful girls long(12).jpg" alt="Responsive Image" />
+      </div>
+      <div class="btn">
+        <button href="">About</button>
       </div>
     </div>
   </body>
