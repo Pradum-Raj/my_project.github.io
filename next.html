@@ -1,155 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Image Border on Button Hover</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Responsive Web Page with Footer</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-      /* General styling */
-      body {
-        font-family: Arial, sans-serif;
-        display: inline-block;
-        justify-content: center;
-    
-        height: 100vh;
-        margin: 25px;
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-        background: radial-gradient(yellow, cyan);
-      }
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+ background-image:url("beautiful girls long (26).jpg");
+ background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
-      .container {
-        text-align: center;
-  
-      }
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
 
-      .image-container {
-        display: inline-block;
-        margin-bottom: 20px;
-        transition: border 0.3s ease;
-      }
+header h1 {
+    margin: 10px 0;
+}
 
-      .image-container img {
-        width: 100%;
-        max-width: 400px;
-        height: auto;
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    flex: 1;
+    padding: 20px 0;
+}
+
+main section {
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+main section h2 {
+    margin-bottom: 10px;
+    color: white;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    color: aliceblue;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+}
+
+footer ul li {
+    margin-left: 15px;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header nav ul li {
         display: block;
-        border: 5px solid transparent;
-        box-sizing: border-box;
-        box-shadow: 1px 3px 8px 6px black;
-    margin: 20px;
-        animation-direction: alternate-reverse;
-        animation-name: image_2;
-        animation-iteration-count: infinite;
-        animation-duration: 1s;
-      }
-
-      .image-container img:hover {
-        transform: scale(1.1);
-        transition-duration: 1s;
-      }
-      @keyframes image_2 {
-        form {
-          background-color: rgb(207, 22, 232);
-        }
-        to {
-          background-color: rgb(207, 25, 231);
-          box-shadow: 0px 0px 13px 7px red;
-        }
-      }
-
-      .hover-button {
-        background-color: #ff1500;
-        color: white;
-        font-family: "Courier New", Courier, monospace;
-        border-radius: 5px;
-        font-size: 30px;
-        border: none;
-        align-items: center;
-        animation-name: image;
-        animation-iteration-count: infinite;
-        animation-duration: 1s;
-      }
-      @keyframes image {
-        form {
-          background-color: red;
-        }
-        to {
-          background-color: red;
-          box-shadow: 0px 0px 30px 10px red;
-        }
-      }
-    .btn button {
-      text-decoration: none;
-      font-size: 35px;
-    
-    border-radius: 10px;
-    border: none;
-    margin: 10px;
-    animation-name: image;
-        animation-iteration-count: infinite;
-        animation-duration: 1s;
+        margin: 10px 0;
     }
-    @keyframes image {
-        form {
-          background-color: red;
-        }
-        to {
-          background-color:blue;
-          box-shadow: 0px 0px 20px 10px blue;
-        }
-      }
-      a{
-        text-decoration: none;
-        color:white;
-      }
+
+    footer .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer ul {
+        justify-content: center;
+    }
+
+    footer ul li {
+        margin: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    main section h2 {
+        font-size: 18px;
+    }
+
+    header nav ul li {
+        margin: 5px 0;
+    }
+}
+#home p{
+color: white;
+}
+#about p{
+color: white;
+}#services p{
+color: white;
+}
+#contact p{
+color: white;
+}
     </style>
-  </head>
-  <body>
-    
-    <div class="container">
-    <h1> this is a image box</h1>
-     
-      <div class="image-container">
-        <img src="Beautiful girls long (20).jpg" alt="Responsive Image" />
-      </div>
-      <div class="image-container">
-        <img src=" Beautiful girls long (21).jpg" alt="Responsive Image" />
-      </div>
-      <div class="image-container">
-        <img src="Beautiful girls long (22).jpg" alt="Responsive Image" />
-      </div>
-      <div class="image-container">
-        <img src=" Beautiful girls long (23).jpg" alt="Responsive Image" />
-      </div>
-      <div class="image-container">
-        <img src="beautiful girls long (24).jpg" alt="Responsive Image" />
-      </div>
-      <div class="image-container">
-        <img src="Beautiful girls long (25).jpg" alt="Responsive Image" />
-      </div>
-      <div class="image-container">
-        <img src="Beautiful girls long (26).jpg" alt="Responsive Image" />
-      </div>
-      <div class="image-container">
-        <img src=" Beautiful girls long (27).jpg" alt="Responsive Image" />
-      </div>
-      <div class="image-container">
-        <img src=" Beautiful girls long (28).jpg" alt="Responsive Image" />
-      </div>
-      <div class="image-container">
-        <img src="Beautiful girls long (29).jpg" alt="Responsive Image" />
-      </div>
-      <div class="image-container">
-        <img src=" Beautiful girls long (30).jpg" alt="Responsive Image" />
-      </div>
-      <div class="image-container">
-        <img src="Beautiful girls long (31).jpg" alt="Responsive Image for Beautiful girls long (31).jpg" />
-      </div>
-       <div class="btn">
-        <button><a href="about.html">Back</button>
-            
-      
-      </div>
-    </div>
-  </body>
+</head>
+<body>
+    <header>
+        <h1>My Website</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="abou.htmlt">About</a></li>
+                <li><a href="about.html">Services</a></li>
+                <li><a href="contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" >
+            <h2>Home</h2>
+            <p>This is the home section of the page.</p>
+        </section>
+        <section id="about">
+            <h2>About</h2>
+            <p>This is the about section of the page.</p>
+        </section>
+        <section id="services">
+            <h2>Services</h2>
+            <p>This is the services section of the page.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>This is the contact section of the page.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 My Website. All rights reserved.</p>
+            <ul>
+                <li><a href="#privacy">Privacy Policy</a></li>
+                <li><a href="#terms">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
 </html>
